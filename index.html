@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Autonomous Indoor Maze Navigation Using a Crazyflie Drone with LIDAR, IMU, and Vision</title>
+  <link rel="icon" type="image/x-icon" href="static/images/Sungwoo_logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Autonomous Indoor Maze Navigation Using a Crazyflie Drone with LIDAR, IMU, and Vision</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/jonsungwoo" target="_blank">Sungwoo Kim</a>,</span>
+                <a href="https://github.com/wilsonmar27" target="_blank">Wilson Martinez</a>,</span>
+                <a href="https://github.com/pranhav16" target="_blank">Pranhav Sundararajan</a></span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Johns Hopkins University<br>
+                      Machine Intelligence in Embedded Systems<br>
+                    </span>
+                  </div>
+
+                  
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/wilsonmar27/crazyflie_ai" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="static/pdfs/MIES_Report.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supplementary</span>
+                  </a>
+                </span>
+
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block"><br><strong>Tools Used: </strong>Crazyflie 2.1, LIDAR (Multiranger), IMU, Optical Flow, Monocular Camera, GAP8 AI Processor, Webots Simulator
+                  </span>
+                </div>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-centered">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/crazyflies_drone.MP4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Demo of Crazyflie drone going through the confined space and lands as it detects the target. 
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+ 
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this work, we present the design and simulation of an autonomous aerial search-and-rescue system using a Crazyflie 2.1 drone, Multiranger LIDAR deck, Flow deck, onboard IMU, and monocular camera. We developed and tested a complex indoor maze world in Webots, real-time sensor fusion for obstacle detection and localization, and demonstrated collision-free navigation to a target "survivor" in narrow corridors. Some of the most significant accomplishments include robust LIDAR-based wall avoidance, stable attitude control using IMU integration, and reliable target recognition in simulation. These accomplishments set a good basis for future use in actual disaster scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Paper Overview -->
+<section class="section hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Overview</h2>
+      <div class="content has-text-justified">
+        <p>
+          This project demonstrates a fully autonomous indoor navigation system designed for search-and-rescue scenarios using the compact Crazyflie 2.1 drone. The system integrates LIDAR, IMU, and vision-based sensing with a custom PID-controlled state machine for collision-free maze navigation and static target detection.
+        </p>
+      </div>  
+    </div>
+    </div>
+  </section>
+<!--End paper Overview -->
+
+<!-- Paper Overview -->
+<section class="section hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Key Features</h2>
+      <div class="content has-text-justified">
+        <ul>
+          <li><strong>Sensor Fusion Pipeline: </strong> Fusion Pipeline: Real-time obstacle detection and localization using LIDAR and IMU</li>
+          <li><strong>Edge AI Vision Module: </strong>Lightweight CNN (98.96% accuracy) deployed on a GAP8 processor for onboard target recognition.</li>
+          <li><strong>Simulation: </strong>Custom indoor maze environments modeled with randomized lighting and textures to test robustness.</li>
+          <li><strong>Finite State Machine (FSM): </strong>Drone adapts its behavior (Forward, Rotate, Stop, etc.) to navigate around obstacles.</li>
+          <li><strong>Real-World Integration: </strong>Threshold-based noise filtering enabled stable flight and successful goal-reaching on real hardware.</li>
+        </ul>
+      </div>  
+    </div>
+    </div>
+  </section>
+<!--End paper Overview -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/webots_simulation.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Webots simulator for a drone to navigate a maze.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/drone_maze_target_2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Webots simulator: maze on a target.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/target.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          3D Printed Target
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/classifier_result2.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Classifier Result: 99.85% accuracy
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/image (4).png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Custom datasets
+      </h2>
+    </div>
+    <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/image (5).png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Neural Network
+      </h2>
+    </div>
+    <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/image.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Final quantized file: less than 1MB
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<!-- Youtube video -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+      <h2 class="title is-3">Simulation Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <!-- Youtube embed code here -->
+            <iframe src="https://www.youtube.com/embed/KrOKIDSXB5Y?si=e4cohnQBFGdR0kOI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End youtube video -->
+
+<!-- Paper poster -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/Design_Day_Poster_4_29_25.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
