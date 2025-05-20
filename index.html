@@ -133,8 +133,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this work, we present the design and simulation of an autonomous aerial search-and-rescue system using a Crazyflie 2.1 drone, Multiranger LIDAR deck, Flow deck, onboard IMU, and monocular camera. We developed and tested a complex indoor maze world in Webots, real-time sensor fusion for obstacle detection and localization, and demonstrated collision-free navigation to a target "survivor" in narrow corridors. Some of the most significant accomplishments include robust LIDAR-based wall avoidance, stable attitude control using IMU integration, and reliable target recognition in simulation. These accomplishments set a good basis for future use in actual disaster scenarios.
-          </p>
+            In this work, we present the design and simulation of an <strong>autonomous aerial search-and-rescue system</strong> using a Crazyflie 2.1 drone, Multiranger LIDAR deck, Flow deck, onboard IMU, and monocular camera. We developed and tested a complex indoor maze world in Webots, real-time sensor fusion for obstacle detection and localization, and demonstrated collision-free navigation to a target "survivor" in narrow corridors. Key achievements include <strong>robust LIDAR-based wall avoidance through a PID-controlled state machine, seamless transfer from simulation to real drone deployment, and reliable onboard target recognition using a quantized CNN model (&lt;1MB) deployed on the drone’s microprocessor.</strong>These results establish a strong foundation for future applications in real-world disaster response scenarios.          </p>
         </div>
       </div>
     </div>
@@ -165,7 +164,7 @@
       <div class="content has-text-justified">
         <ul>
           <li><strong>Sensor Fusion Pipeline: </strong> Fusion Pipeline: Real-time obstacle detection and localization using LIDAR and IMU</li>
-          <li><strong>Edge AI Vision Module: </strong>Lightweight CNN (98.96% accuracy) deployed on a GAP8 processor for onboard target recognition.</li>
+          <li><strong>Edge AI Vision Module: </strong>Lightweight CNN (99.85% accuracy) deployed on a GAP8 processor for onboard target recognition.</li>
           <li><strong>Simulation: </strong>Custom indoor maze environments modeled with randomized lighting and textures to test robustness.</li>
           <li><strong>Finite State Machine (FSM): </strong>Drone adapts its behavior (Forward, Rotate, Stop, etc.) to navigate around obstacles.</li>
           <li><strong>Real-World Integration: </strong>Threshold-based noise filtering enabled stable flight and successful goal-reaching on real hardware.</li>
@@ -183,14 +182,14 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/webots_simulation.png" alt="MY ALT TEXT"/>
+        <img src="static/images/webots_simulation.png" alt="MY ALT TEXT" width="800"/>
         <h2 class="subtitle has-text-centered">
           Webots simulator for a drone to navigate a maze.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/drone_maze_target_2.png" alt="MY ALT TEXT"/>
+        <img src="static/images/drone_maze_target_2.png" alt="MY ALT TEXT" width="800"/>
         <h2 class="subtitle has-text-centered">
           Webots simulator: maze on a target.
         </h2>
@@ -204,14 +203,14 @@
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/classifier_result2.png" alt="MY ALT TEXT"/>
+        <img src="static/images/classifier_result2.png" alt="MY ALT TEXT" width="800"/>
         <h2 class="subtitle has-text-centered">
          Classifier Result: 99.85% accuracy
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/image (4).png" alt="MY ALT TEXT"/>
+      <img src="static/images/image (4).png" alt="MY ALT TEXT" width="800"/>
       <h2 class="subtitle has-text-centered">
         Custom datasets
       </h2>
